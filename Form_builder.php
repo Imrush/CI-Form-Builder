@@ -10,31 +10,33 @@ class CI_Form_builder {
 
 	function create_form($form = array())
 	{
-		// Style is the type of form styling based on Bootstrap
-		$class = ( isset($form['attr']['class']) ) ? $form['attr']['class'] : '';
-		echo form_open($form['attr']['url'], array('class' => $class));
+		/**
+		 * Create the opening form tag and pass in the attributes
+		 */
+		echo form_open($form['attr']['action'], $form['attr']);
 	
+		/**
+		 * Loop over the results and create the proper fields
+		 */
 		foreach ( $form as $key => $val )
 		{
 			if ( isset($val['type']) )
 			{
 				$type = $val['type'];
-				$attr = ( isset($val['attr']) ) ? $val['attr'] : array();
+				$attr = $this->check_val($val['attr']);
+				
+				echo '<div class="control-group">';
 				
 				/**
-				 * If the type is an input, password, hidden field or select menu.
-				 * 
-				 * Might make the if condition to check for radio and checkbox, then make all the current the else, too many OR statements
+				 * Create the label
 				 */
-				echo '<div class="control-group">';
-				$required = ( isset($val['required']) ) ? ' *' : '';						
-				
+				$required = ( isset($val['required']) ) ? ' *' : '';
 				if ( isset($val['label']) ) echo form_label($val['label'] . $required, $key, array('class' => 'control-label'));
 				
 				echo '<div class="controls">';
 				
 				/**
-				 * If the element is a select menu
+				 * Select Element
 				 */
 				if ( $type == 'select' )
 				{
@@ -124,4 +126,9 @@ class CI_Form_builder {
 		echo form_close();
 	}
 
-}	
+	function check_val( $val )
+	{
+		return ( isset($val) ) ? $val : '';
+	}
+
+}

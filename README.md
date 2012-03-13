@@ -27,7 +27,7 @@ Form Builder requires an array of fields.
 
     $data['form'] = array(
         'attr' => array(
-            'url' => 'my/submit',
+            'action' => 'my/submit',
             'class' => 'form-horizontal'
         ),
         'email' => array(
@@ -53,7 +53,7 @@ Here is a more complex example:
 
     $data['form'] = array(
         'attr' => array(
-            'url' => 'my/action',
+            'action' => 'my/action',
             'class' => 'form-horizontal'
         ),
         'id' => array(

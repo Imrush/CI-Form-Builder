@@ -131,3 +131,12 @@ The View
 From inside the view you call the `create_form()` method.
 
     <?php $this->form_builder->create_form($form); ?>
+
+
+TODO
+----
+
+* Setup validation rules for the fields
+* Allow to change the form method to GET, Defaults to POST
+* Separate out the Form_builder.php code to make it a little cleaner
+* Create a fancy site that gives working examples of the code! (Low priority)

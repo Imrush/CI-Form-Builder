@@ -19,7 +19,7 @@ Form Builder requires an array of fields.
 
     $data['form'] = array(
         'attr' => array(
-        'url' => 'my/submit',
+            'url' => 'my/submit',
             'class' => 'form-horizontal'
         ),
         'email' => array(

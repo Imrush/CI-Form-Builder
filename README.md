@@ -15,6 +15,14 @@ Controller
 
 Call Form Builder from your controller by using `$this->load->library('form_builder');`
 
+**Creating a field**
+
+    'fieldName' => array(
+        'type' => '[ input, hidden, select, textarea, email, number, checkbox, radio, etc ]',
+        'label' => '[ Field Name ]',
+        'attr' => [ array of attributes on the form field, **name** and **id** are pulled from the **fieldName** key ],
+    ),
+
 Form Builder requires an array of fields.
 
     $data['form'] = array(

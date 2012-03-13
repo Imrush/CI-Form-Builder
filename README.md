@@ -23,7 +23,7 @@ Form Builder requires an array of fields.
             'class' => 'form-horizontal'
         ),
         'email' => array(
-            'type' => 'input',
+            'type' => 'email',
             'label' => 'Email',
             'attr' => array('placeholder' => 'youremail@example.com'),
         ),

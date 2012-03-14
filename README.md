@@ -19,7 +19,7 @@ Call Form Builder from your controller by using `$this->load->library('form_buil
 
     'fieldName' => array(
         'type' => '[ input, hidden, select, textarea, email, number, checkbox, radio, etc ]',
-        'label' => '[ Field Name ]',
+        'label' => 'Field Name',
         'attr' => [ array of attributes on the form field, **name** and **id** are pulled from the **fieldName** key ],
     ),
 
